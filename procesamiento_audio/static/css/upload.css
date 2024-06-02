@@ -1,0 +1,145 @@
+/* Estilos específicos para la página de carga */
+.container {
+    display: flex; /* Utilizamos flexbox para el diseño de dos columnas */
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+.controls {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-right: 1px solid #ddd;
+    text-align: center; 
+}
+.section {
+    margin-bottom: 20px;
+    text-align: center;
+    height: 380px;
+    margin-top: 20px;
+}
+
+.section h3 {
+    margin-top: 0;
+    font-size: 30px;
+
+}
+
+/* Estilos para elementos de formulario en los controles */
+.section input,
+.section button {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.section label {
+    margin-top: 10px;
+    display: block;
+}
+
+.section input[type="file"] {
+    display: none;
+}
+
+.section label[for="file1"], 
+.section label[for="file2"] {
+    background-color: #007bff;
+    font-weight: bold;
+    color: black;
+    padding: 10px 15px;
+    margin: 20px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 22px;
+}
+
+/* Estilos para botones e inputs */
+.section button, .section input[type="range"] {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* Estilos para botones e inputs */
+.section button,
+.section input[type="range"] {
+    width: 80%; /* Ancho reducido para los botones y sliders */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.section button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Estilos para la columna de visualización */
+.visualization {
+    flex: 2; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Estilos para las secciones de gráficos */
+.graph-section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px; /* Espacio entre secciones */
+    display: flex; /* Usar flexbox para alinear imágenes */
+    flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en varias líneas */
+    justify-content: space-around; /* Distribuir las imágenes uniformemente */
+    gap: 10px; /* Espacio entre imágenes */
+    width: 95%;
+    overflow-y: auto;
+}
+
+
+.graph-section h3 {
+    text-align: center;
+    margin-top: 0;
+    width: 100%; /* Título ocupa todo el ancho de la sección */
+}
+
+.graph-section img {
+    width: calc(50% - 10px); 
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilo personalizado para la barra de desplazamiento */
+#graphs-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#graphs-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#graphs-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+#graphs-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#save-mixed-button {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}

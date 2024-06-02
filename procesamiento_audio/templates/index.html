@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesamiento de Audio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="screen">
+        <div class="background">
+            <img class="background-image" src="{{ url_for('static', filename='images/fondo07.png') }}" alt="Fondo de audio">
+        </div>
+        <div class="content">
+            <h2 class="course-title">Curso: Proceso Digital de Señales</h2>
+            <h3 class="topic">Tema: Edición, mezcla y filtrado de audio</h3>
+            <h4 class="professor">Dr. Ing. Rafael Bustamante Alvarez</h4>
+            <div class="members">
+                <br>
+                <p>INTEGRANTES (GRUPO 7):</p>
+                <br>
+                <p>Cahuana Ancco Alex David - 21190049</p>
+                <br>
+                <p>Palomino Chaua Kevin Saam - 21190065</p>
+            </div>
+            <a href="{{ url_for('upload') }}"><button id="start-button">SIGUIENTE</button></a>
+        </div>
+    </div>
+</body>
+</html>

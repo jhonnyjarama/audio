@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Procesamiento de Audio - Filtrado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/filter.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="controls" id="filter-controls">
+            <div class="section-mezcla">
+                <h3 class="titulo">Mezcla</h3>
+                <label for="mezcla">Seleccionar Audio</label>
+                <input type="file" id="mezcla" accept=".m4a,.mp3,.wav">
+                <button id="play-button" disabled>Reproducir</button>
+                <input type="range" id="volume-slider-1" min="0" max="100" value="50" disabled>
+            </div>
+            
+            <table>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Tipo de Filtro:</legend>
+                            <select id="filter-type">
+                                <option value="lowpass">Pasa bajas</option>
+                                <option value="highpass">Pasa altas</option>
+                                <option value="bandpass">Pasa bandas</option>
+                                <option value="bandstop">Rechaza bandas</option>
+                            </select>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Frecuencia de Corte (Hz):</legend>
+                            <div id="cutoff-frequency-container">
+                                <label for="cutoff-frequency1">Frecuencia de Corte 1:</label>
+                                <input type="number" id="cutoff-frequency1" value="1000">
+                            </div>
+                            <div id="cutoff-frequency2-container" style="display:none;">
+                                <label for="cutoff-frequency2">Frecuencia de Corte 2:</label>
+                                <input type="number" id="cutoff-frequency2">
+                            </div>
+                            <p id="cutoff-help" style="display:none;">(Para 'bandpass' y 'bandstop', proporcionar dos valores)</p>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Orden del Filtro:</legend>
+                            <input type="number" id="filter-order" value="4">
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+
+            <button id="apply-filter-button">Aplicar Filtro</button>
+            <button id="play-filtered-button" disabled>Reproducir Filtrado</button>
+            <button id="save-filtered-button" disabled>Guardar Filtrado</button>
+            
+        </div>
+            
+        <div id="graphs-container" style="max-height: 800px; overflow-y: auto;">
+            <div class="visualization">
+                <div class="graph-section" id="graph-filter-response"> 
+                    <h3>Respuesta en Frecuencia del Filtro</h3>
+                    <img id="graph-filtered-response" src="" alt="Respuesta de Frecuencia">
+                </div>
+                <hr>
+                <div class="graph-section" id="graphs-filtered">
+                    <h3>Gráficos de Audio Filtrado</h3>
+                    <img id="graph-filtered-time-domain" src="" alt="Dominio del Tiempo">
+                    <img id="graph-filtered-spectrogram" src="" alt="Espectrograma">
+                    <img id="graph-filtered-fft" src="" alt="FFT">
+                    <img id="graph-filtered-amplitude-histogram" src="" alt="Histograma de Amplitud">
+                    <img id="graph-filtered-cepstrum" src="" alt="Cepstrum">
+                    <img id="graph-filtered-frequency-spectrum" src="" alt="Espectro de Frecuencia">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scriptfilter.js') }}"></script>
+</body>
+</html>
