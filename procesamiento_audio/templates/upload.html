@@ -8,21 +8,21 @@
     <div class="container">
         <div class="controls">
             <div class="section">
-                <h3>Audio 1</h3>
+                <h3>AUDIO 1</h3>
                 <label for="file1">Seleccionar Archivo</label>
                 <input type="file" id="file1" accept=".m4a,.mp3,.wav">
                 <button id="play-button-1" disabled>Reproducir</button>
                 <input type="range" id="volume-slider-1" min="0" max="100" value="50" disabled>
             </div>
             <div class="section">
-                <h3>Audio 2</h3>
+                <h3>AUDIO 2</h3>
                 <label for="file2">Seleccionar Archivo</label>
                 <input type="file" id="file2" accept=".m4a,.mp3,.wav">
                 <button id="play-button-2" disabled>Reproducir</button>
                 <input type="range" id="volume-slider-2" min="0" max="100" value="50" disabled>
             </div>
             <div class="section">
-                <h3>Mezcla</h3>
+                <h3>MEZCLA</h3>
                 <button id="mix-button">Crear Mezcla</button>
                 <button id="play-mixed-button" disabled>Reproducir Mezcla</button>
                 <input type="range" id="volume-slider-mixed" min="0" max="100" value="50" disabled>
@@ -35,30 +35,30 @@
         <div class="visualization">
             <div class="graph-section" id="graphs-audio1">
                 <h3>Gráficos de Audio 1</h3>
-                <img id="graph-time-domain1" src="" alt="Dominio del Tiempo">
-                <img id="graph-spectrogram1" src="" alt="Espectrograma">
-                <img id="graph-fft1" src="" alt="FFT">
-                <img id="graph-amplitude-histogram1" src="" alt="Histograma de Amplitud">
-                <img id="graph-cepstrum1" src="" alt="Cepstrum">
-                <img id="graph-frequency-spectrum1" src="" alt="Espectro de Frecuencia">
+                <img id="graph-time-domain1" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Dominio del Tiempo">
+                <img id="graph-spectrogram1" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Espectrograma">
+                <img id="graph-fft1" src="{{ url_for('static', filename='images/cargando.png') }}" alt="FFT">
+                <img id="graph-amplitude-histogram1" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Histograma de Amplitud">
+                <img id="graph-cepstrum1" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Cepstrum">
+                <img id="graph-frequency-spectrum1" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Espectro de Frecuencia">
             </div>
             <div class="graph-section" id="graphs-audio2">
                 <h3>Gráficos de Audio 2</h3>
-                <img id="graph-time-domain2" src="" alt="Dominio del Tiempo">
-                <img id="graph-spectrogram2" src="" alt="Espectrograma">
-                <img id="graph-fft2" src="" alt="FFT">
-                <img id="graph-amplitude-histogram2" src="" alt="Histograma de Amplitud">
-                <img id="graph-cepstrum2" src="" alt="Cepstrum">
-                <img id="graph-frequency-spectrum2" src="" alt="Espectro de Frecuencia">
+                <img id="graph-time-domain2" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Dominio del Tiempo">
+                <img id="graph-spectrogram2" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Espectrograma">
+                <img id="graph-fft2" src="{{ url_for('static', filename='images/cargando.png') }}" alt="FFT">
+                <img id="graph-amplitude-histogram2" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Histograma de Amplitud">
+                <img id="graph-cepstrum2" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Cepstrum">
+                <img id="graph-frequency-spectrum2" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Espectro de Frecuencia">
             </div>
             <div class="graph-section" id="graphs-mixed">
                 <h3>Gráficos de Audio Mezclado</h3>
-                <img id="graph-time-domain-mixed" src="" alt="Dominio del Tiempo">
-                <img id="graph-spectrogram-mixed" src="" alt="Espectrograma">
-                <img id="graph-fft-mixed" src="" alt="FFT">
-                <img id="graph-amplitude-histogram-mixed" src="" alt="Histograma de Amplitud">
-                <img id="graph-cepstrum-mixed" src="" alt="Cepstrum">
-                <img id="graph-frequency-spectrum-mixed" src="" alt="Espectro de Frecuencia">
+                <img id="graph-time-domain-mixed" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Dominio del Tiempo">
+                <img id="graph-spectrogram-mixed" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Espectrograma">
+                <img id="graph-fft-mixed" src="{{ url_for('static', filename='images/cargando.png') }}" alt="FFT">
+                <img id="graph-amplitude-histogram-mixed" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Histograma de Amplitud">
+                <img id="graph-cepstrum-mixed" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Cepstrum">
+                <img id="graph-frequency-spectrum-mixed" src="{{ url_for('static', filename='images/cargando.png') }}" alt="Espectro de Frecuencia">
             </div>
         </div>
     </div>

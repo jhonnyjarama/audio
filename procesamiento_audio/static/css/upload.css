@@ -1,26 +1,43 @@
 /* Estilos específicos para la página de carga */
+body {
+    
+    background-color: rgba(13, 12, 12, 0.77); /* Fondo semi-transparente oscuro */
+}
 .container {
     display: flex; /* Utilizamos flexbox para el diseño de dos columnas */
-    height: 100vh; /* Altura completa de la ventana */
+    height: auto; /* Altura completa de la ventana */
+    background-image: url('../images/fondo07.png');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en el contenedor */
+    
+    
 }
 
 .controls {
     flex: 1;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-right: 1px solid #ddd;
+    /*background-color: rgba(255, 255, 255, 0.9);*/
+    border-right: 1px solid;
+    border-color: none;
     text-align: center; 
+    background-color: rgba(13, 12, 12, 0.77); /* Fondo semi-transparente oscuro */
+    
 }
 .section {
     margin-bottom: 20px;
     text-align: center;
     height: 380px;
     margin-top: 20px;
+    height: 420px;
+    padding-top: 130px;
+    
 }
 
 .section h3 {
     margin-top: 0;
     font-size: 30px;
+    color: #fdb4ea;
 
 }
 
@@ -32,6 +49,7 @@
     width: 80%;
     padding: 10px;
     font-size: 16px;
+    color: #fdb4ea;
 }
 
 .section label {
@@ -45,9 +63,9 @@
 
 .section label[for="file1"], 
 .section label[for="file2"] {
-    background-color: #007bff;
+    background-color: #56f5f5bd;
     font-weight: bold;
-    color: black;
+    color: #0a0a0a;
     padding: 10px 15px;
     margin: 20px 5px;
     border: none;
@@ -56,6 +74,7 @@
     display: inline-block;
     font-size: 22px;
 }
+
 
 /* Estilos para botones e inputs */
 .section button, .section input[type="range"] {
@@ -75,10 +94,20 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    background-color: #56f5f5bd;
+    font-weight: bold;
+    color: #030303;
+    font-size: 30px;
+
 }
 .section button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+    background-color: #6d8e8ebd;
+    font-weight: bold;
+    color: #fdb4ea;
+    font-size: 30px;
+
 }
 
 /* Estilos para la columna de visualización */
@@ -88,33 +117,41 @@
     display: flex;
     flex-direction: column;
     align-items: center; 
+    height: 138vh; /* Aumenta la altura total para permitir más espacio para los gráficos */
+    border-color: none;
+    background-color: rgba(13, 12, 12, 0.77); /* Fondo semi-transparente oscuro */
+    
 }
 
 /* Estilos para las secciones de gráficos */
 .graph-section {
-    border: 1px solid #ddd;
+    border: 1px solid;
     padding: 10px;
-    margin-bottom: 20px; /* Espacio entre secciones */
+    /* margin-bottom: 20px; Espacio entre secciones */
     display: flex; /* Usar flexbox para alinear imágenes */
     flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en varias líneas */
     justify-content: space-around; /* Distribuir las imágenes uniformemente */
     gap: 10px; /* Espacio entre imágenes */
     width: 95%;
+    height: 100%; /* Asegura que cada sección de gráficos ocupe todo el espacio disponible */
     overflow-y: auto;
 }
 
 
 .graph-section h3 {
     text-align: center;
-    margin-top: 0;
+    margin-top: 5px;
     width: 100%; /* Título ocupa todo el ancho de la sección */
+    font-size: 30px;
+    font-weight: bold;
+    color: #fdb4ea;
 }
 
 .graph-section img {
     width: calc(50% - 10px); 
     height: auto;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid ;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
@@ -142,4 +179,90 @@
 
 a {
     text-decoration: none;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Desactivar el estilo por defecto de los navegadores en Webkit */
+    width: 80%; /* Ancho del control deslizante */
+    height: 10px; /* Altura del control deslizante */
+    background: #ddd; /* Color de fondo del control deslizante */
+    outline: none; /* Eliminar el borde del control deslizante */
+    opacity: 0.7; /* Opacidad del control deslizante */
+    -webkit-transition: .2s; /* Transición suave en Webkit */
+    transition: opacity .2s; /* Transición suave en otros navegadores */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 10px auto; /* Márgenes para centrar */
+    display: block; /* Convertir en elemento de bloque */
+}
+
+input[type="range"]:hover {
+    opacity: 1; /* Aumentar la opacidad al pasar el mouse */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Desactivar el estilo por defecto del pulgar en Webkit */
+    appearance: none; /* Desactivar el estilo por defecto del pulgar */
+    width: 20px; /* Ancho del pulgar */
+    height: 20px; /* Altura del pulgar */
+    background: #fdb4ea; /* Color del pulgar */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    border-radius: 50%; /* Pulgar redondeado */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra del pulgar */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px; /* Ancho del pulgar en Firefox */
+    height: 20px; /* Altura del pulgar en Firefox */
+    background: #007bff; /* Color del pulgar en Firefox */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse en Firefox */
+    border-radius: 50%; /* Pulgar redondeado en Firefox */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra del pulgar en Firefox */
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px; /* Ancho del pulgar en IE */
+    height: 20px; /* Altura del pulgar en IE */
+    background: #007bff; /* Color del pulgar en IE */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse en IE */
+    border-radius: 50%; /* Pulgar redondeado en IE */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra del pulgar en IE */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%; /* Ancho de la pista */
+    height: 10px; /* Altura de la pista */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    background: #ddd; /* Color de la pista */
+    border-radius: 5px; /* Bordes redondeados de la pista */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra de la pista */
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%; /* Ancho de la pista en Firefox */
+    height: 10px; /* Altura de la pista en Firefox */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse en Firefox */
+    background: #ddd; /* Color de la pista en Firefox */
+    border-radius: 5px; /* Bordes redondeados de la pista en Firefox */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra de la pista en Firefox */
+}
+
+input[type="range"]::-ms-track {
+    width: 100%; /* Ancho de la pista en IE */
+    height: 10px; /* Altura de la pista en IE */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse en IE */
+    background: transparent; /* Fondo transparente en IE */
+    border-color: transparent; /* Bordes transparentes en IE */
+    color: transparent; /* Color transparente en IE */
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: #ddd; /* Color de la pista inferior en IE */
+    border-radius: 5px; /* Bordes redondeados de la pista inferior en IE */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra de la pista inferior en IE */
+}
+
+input[type="range"]::-ms-fill-upper {
+    background: #ddd; /* Color de la pista superior en IE */
+    border-radius: 5px; /* Bordes redondeados de la pista superior en IE */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra de la pista superior en IE */
 }
